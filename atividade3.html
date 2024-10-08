@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atividade</title>
+    </head>
+    <body>
+        
+        <h1>
+            Estruturas condicionais
+        </h1>
+        <script>
+        let estaChovendo = prompt("Está chovendo? (Sim/não)"). toLowerCase() ==="sim" ? "Está chovendo!" : "Não está chovendo";
+            alert(estaChovendo)
+
+        let estaSol = prompt("Está Sol? (Sim/não)"). toLowerCase() ==="sim";
+        let estaFrio = prompt("Está frio? (Sim/não)"). toLowerCase() ==="sim";
+
+
+            if (estaChovendo) {
+                    alert("Está chovendo, use um guarda chuva ou roupas impemeaveis!");
+            } 
+                else if (estaSol) {
+                    alert("Está ensolarado, use roupas frescas e protetor solar!");
+            } 
+                else if (estaFrio) {
+                    alert("Está frio, vista um casaco e um cachecol!");
+            }
+
+            else { 
+                alert("O tempo está agradavel, roupas frescas são uma otima condição!");
+            }
+        </script>
+    </body>
+
+</html>
