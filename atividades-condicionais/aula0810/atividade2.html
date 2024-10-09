@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 2</title>
+
+    <style>
+        html {
+            background-color: black;
+        }
+
+        h1 {
+            color: white;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            text-align: center;
+            font-size: 3em;
+        }
+
+        h1:hover {
+            color: black;
+        }
+
+    </style>
+  </head>
+  <body>
+    <h1>Boletim de notas</h1>
+
+    <script>
+      let nota = prompt("Inserir aqui a nota do aluno...");
+
+      if (nota >= 9) {
+        alert("A menção final será A");
+      } else if (nota >= 7) {
+        alert("A menção final será B");
+      } else if (nota >= 5) {
+        alert("A menção final será C");
+      } else if (nota >= 3) {
+        alert("A menção final será D");
+      } else {
+        alert("A menção final será F");
+      }
+    </script>
+  </body>
+</html>
