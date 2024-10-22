@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p {
+            cursor: pointer;
+        }
+
+        .btn {
+            margin-left: 2em;
+            border-radius: 5px;
+            font-family: sans-serif;
+            border: none;
+            background-color: rgb(95, 119, 119);
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 0.7s;
+        }
+
+        .btn:hover {
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo" >Preparado? Clique!</h1>
+    <button onClick="acaoBotao()">Clicar</button>
+    <button onClick="inserirElemento()">inserir</button>
+
+    <br></br>
+    <span>Remover os ultimos 5 itens</span>
+    <button onClick="removerItens()">Remover</button>
+
+    <script>
+        let cont = 0;
+        function acaoBotao() {
+            cont +=1;
+            document.getElementById("titulo").innerHTML = `Número do clique ${cont}`;
+        }
+
+        function inserirElemento() {
+            cont += 1;
+            const novoParagrafo = document.createElement("p");
+            novoParagrafo.textContent = `Clique ${cont}`;
+            novoParagrafo.id = cont;
+
+            const botaoRemover = document.createElement("button");
+            botaoRemover.textContent = "Remover";
+            botaoRemover.className = "btn";
+            botaoRemover.onclick = () => {
+                const id = novoParagrafo.id;
+
+
+                let itemRemover = document.getElementById(id);
+                itemRemover.remove();
+            }
+            novoParagrafo.appendChild(botaoRemover);
+
+            document.body.appendChild(novoParagrafo);
+        }
+
+        function removerItens() {
+            contAux +=1;
+            while(contAux <= 5) {
+                const elemento = document.getElementById(cont);
+                elemento.parentNode.removeChild(elemento);
+
+                cont--;
+                contAux++;
+            }
+        }
+    </script>
+</body>
+</html>
